@@ -9,7 +9,7 @@ app = Flask(__name__)
 # 从环境变量读取配置
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 ANTHROPIC_BASE_URL = os.environ.get("ANTHROPIC_BASE_URL", "https://api.xiaomimimo.com/anthropic")
-MIMO_MODEL = os.environ.get("MIMO_MODEL", "mimo-7b")
+MIMO_MODEL = os.environ.get("MIMO_MODEL", "mimo-v2.5-pro")
 WECHAT_TOKEN = os.environ.get("WECHAT_TOKEN", "")
 
 # Claude 客户端（指向 MIMO API）
