@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: wechat-claude-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_BASE_URL
+        value: https://api.xiaomimimo.com/anthropic
+      - key: MIMO_MODEL
+        sync: false
+      - key: WECHAT_TOKEN
+        sync: false
